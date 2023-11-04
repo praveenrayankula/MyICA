@@ -6,12 +6,12 @@ plugins {
 
 android {
     namespace = "uk.ac.tees.w9623647.parkme"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "uk.ac.tees.w9623647.parkme"
         minSdk = 24
-        targetSdk = 33
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
@@ -41,7 +41,7 @@ android {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.4.3"
+        kotlinCompilerExtensionVersion = "1.5.3"
     }
     packaging {
         resources {
@@ -70,4 +70,10 @@ dependencies {
 
     implementation(platform("com.google.firebase:firebase-bom:32.5.0"))
     implementation("com.google.firebase:firebase-analytics")
+    implementation("com.google.firebase:firebase-firestore")
+    debugImplementation("androidx.compose.ui:ui-tooling")
+    debugImplementation("androidx.compose.ui:ui-test-manifest")
+    implementation("androidx.compose.material:material:1.5.4")
+    implementation("androidx.navigation:navigation-compose:2.7.4")
+    implementation("com.google.firebase:firebase-auth-ktx:22.2.0")
 }
