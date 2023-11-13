@@ -115,7 +115,7 @@ fun RegisterScreen(
                 OutlinedTextField(
                     value = firstName,
                     onValueChange = {
-                        if (it.length <= 25)
+                        if (it.length <= 45)
                             firstName = it
                         if (it.isEmpty())
                             focusManager.clearFocus()
@@ -131,7 +131,7 @@ fun RegisterScreen(
                 OutlinedTextField(
                     value = lastName,
                     onValueChange = {
-                        if (it.length <= 25)
+                        if (it.length <= 45)
                             lastName = it
                         if (it.isEmpty())
                             focusManager.clearFocus()
@@ -147,7 +147,7 @@ fun RegisterScreen(
                 OutlinedTextField(
                     value = email,
                     onValueChange = {
-                        if (it.length <= 25)
+                        if (it.length <= 45)
                             email = it
                         if (it.isEmpty())
                             focusManager.clearFocus()
@@ -163,7 +163,7 @@ fun RegisterScreen(
                 OutlinedTextField(
                     value = userName,
                     onValueChange = {
-                        if (it.length <= 25)
+                        if (it.length <= 45)
                             userName = it
                         if (it.isEmpty())
                             focusManager.clearFocus()
@@ -179,7 +179,7 @@ fun RegisterScreen(
                 OutlinedTextField(
                     value = password,
                     onValueChange = {
-                        if (it.length <= 25)
+                        if (it.length <= 45)
                             password = it
                         if (it.isEmpty())
                             focusManager.clearFocus()

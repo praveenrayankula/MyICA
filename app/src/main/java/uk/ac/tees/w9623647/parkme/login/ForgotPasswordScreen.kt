@@ -97,7 +97,7 @@ fun ForgotPasswordScreen(
                 OutlinedTextField(
                     value = username,
                     onValueChange = {
-                        if (it.length <= 25)
+                        if (it.length <= 45)
                             username = it
                     },
                     label = { Text(text = "Username") },

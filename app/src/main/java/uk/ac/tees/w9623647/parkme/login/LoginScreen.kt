@@ -101,12 +101,12 @@ fun LoginInterface(
             OutlinedTextField(
                 value = username,
                 onValueChange = {
-                    if (it.length <= 25)
+                    if (it.length <= 45)
                         username = it
                     if (it.isEmpty())
                         focusManager.clearFocus()
                 },
-                label = { Text(text = "Username") },
+                label = { Text(text = "Email") },
                 modifier = Modifier
                     .fillMaxWidth(),
                 maxLines = 1,
@@ -118,7 +118,7 @@ fun LoginInterface(
                 value = password,
                 visualTransformation = PasswordVisualTransformation(),
                 onValueChange = {
-                    if (it.length <= 25)
+                    if (it.length <= 45)
                         password = it
                     if (it.isEmpty())
                         focusManager.clearFocus()
