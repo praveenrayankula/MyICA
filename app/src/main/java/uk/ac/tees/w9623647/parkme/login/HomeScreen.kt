@@ -14,19 +14,27 @@ import androidx.compose.material.TopAppBar
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.navigation.NavHostController
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.auth.ktx.userProfileChangeRequest
 import com.google.firebase.ktx.Firebase
+import uk.ac.tees.w9623647.parkme.ui.LocationPermissionScreen
+import uk.ac.tees.w9623647.parkme.ui.MapScreen
+import uk.ac.tees.w9623647.parkme.utils.checkForPermission
 
 @Composable
 fun HomeScreen(
     navController: NavHostController
 ) {
     val user = Firebase.auth.currentUser
-
+    val context = LocalContext.current
     Scaffold(
         // TOP BAR AND ICONS
         topBar = {
@@ -60,16 +68,22 @@ fun HomeScreen(
             contentAlignment = Alignment.Center
         ) {
             Column {
-                user?.let {
-                    val name = it.email
-                    val displayName = it.email
-                    updateDisplayName(displayName)
-                    Text(text = "Hi, $name")
+
+               var hasLocationPermission by  remember {
+                    mutableStateOf(checkForPermission(context))
+                }
+
+                if (hasLocationPermission) {
+                    MapScreen(context)
+                } else {
+                    LocationPermissionScreen {
+                        hasLocationPermission = true
+                    }
+                }
                 }
             }
         }
     }
-}
 
 fun updateDisplayName(name: String?) {
     val user = Firebase.auth.currentUser
