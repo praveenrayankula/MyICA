@@ -76,4 +76,15 @@ dependencies {
     implementation("androidx.compose.material:material:1.5.4")
     implementation("androidx.navigation:navigation-compose:2.7.4")
     implementation("com.google.firebase:firebase-auth-ktx:22.2.0")
+
+
+    // maps compose
+    implementation ("com.google.maps.android:maps-compose:2.11.5")
+
+    // google map services
+    implementation ("com.google.android.gms:play-services-maps:18.1.0")
+    implementation ("com.google.android.gms:play-services-location:21.0.1")
+
+    // google maps utils
+    implementation ("com.google.maps.android:android-maps-utils:3.4.0")
 }
