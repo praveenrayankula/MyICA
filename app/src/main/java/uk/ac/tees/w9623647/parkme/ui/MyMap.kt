@@ -92,10 +92,10 @@ fun MyMap(
             latlangList.toList().forEach {
                 Marker(
                     state = MarkerState(position = it),
-                    title = "Location",
-                    snippet = "Marker in current location",
+                    title = "Parking Places",
+                    snippet = "Your Car can Park Here",
                     icon = if (changeIcon) {
-                        bitmapDescriptor(context, R.drawable.ic_shopping_cart_24)
+                        bitmapDescriptor(context, R.drawable.baseline_directions_car_24)
                     } else null
                 )
             }

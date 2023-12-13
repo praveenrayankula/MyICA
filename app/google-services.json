@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "192723645821",
+    "project_id": "parkme-bba13",
+    "storage_bucket": "parkme-bba13.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:192723645821:android:942045302665f2b8434814",
+        "android_client_info": {
+          "package_name": "uk.ac.tees.w9623647.parkme"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYjdYp1Hz-dleTrEmuvUoCVgbb5nLVch8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
